@@ -21,9 +21,8 @@ function App() {
 
   }
   const handleChange = (event) => {
-    console.log(event.target.value)
     setTitle(event.target.value)
-
+    console.log(title)
   }
 
 

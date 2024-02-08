@@ -6,9 +6,13 @@ export const useGetMovie=(titulo)=>{
     const [movies,setMovie]=useState([])
 
     const getMovies=()=>{
-  fetch ('https://www.omdbapi.com/?apikey=ca51684f&s='+title)
+      
+  fetch ('https://www.omdbapi.com/?apikey=ca51684f&s='+titulo)
   .then ((data) => data.json())
-  .then((result) => setMovie(result.Search));
+  .then((result) => {
+    console.log(result)
+    setMovie(result.Search)
+  });
 
     }
     
